@@ -6,7 +6,7 @@
 **Code will come soon.**
 
 ## Method Overview
-![](assets/pipeline2.png)
+![](assets/pipeine2.png)
 
 ## Citation
 If you find _GenMAC_ useful in your project, please cite our work:
