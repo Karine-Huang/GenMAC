@@ -9,7 +9,7 @@
 ![](assets/pipeline.png)
 
 ## Citation
-If you find _DreamComposer_ useful in your project, please cite our work:
+If you find _GenMAC_ useful in your project, please cite our work:
 ```
 @article{
 }
