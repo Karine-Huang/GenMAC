@@ -12,7 +12,7 @@ This repository provides the inference code for **GenMAC**, enabling composition
 
 
 ## 🔨 Installation
----
+
 ### Step 1: Install Environment
 
 Set up the required environment using Anaconda:
@@ -43,7 +43,7 @@ pip install -r requirements.txt
 
 
 ## 💡 Quick Start
----
+
 ### Step 1: Prepare API Key
 GenMAC uses GPT-4o for its multi-agent collaboration. To enable access to the model:
 
@@ -75,12 +75,12 @@ python scripts/run_t2v.py
 
   Modify the maximum iteration number (MAX_ITER) in Line 22 of the script (scripts/run_t2v.py):
 
-  ```MAX_ITER = 5```
+  *e.g.*, ```MAX_ITER = 5```
 - Set Seed
 
   Set the seed value in Line 13 of the script (scripts/run_t2v.py):
 
-  ```seed = 12345678```
+  *e.g.*, ```seed = 12345678```
 
 ### Output
 Generated videos will be saved in the following directory:
@@ -102,7 +102,7 @@ The generated videos will be located in:
 We would like to thank the following great open-source projects and research works: [LVD](https://github.com/TonyLianLong/LLM-groundedVideoDiffusion), [VideoCrafter2](https://github.com/AILab-CVC/VideoCrafter).
 
 ## 📚 Citation
----
+
 @article{huang2024genmaccompositionaltexttovideogeneration,
       title={GenMAC: Compositional Text-to-Video Generation with Multi-Agent Collaboration}, 
       author={Kaiyi Huang and Yukun Huang and Xuefei Ning and Zinan Lin and Yu Wang and Xihui Liu},
