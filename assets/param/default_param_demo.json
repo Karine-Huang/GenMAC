@@ -1,0 +1,21 @@
+{
+    "loss_scale": 10,
+    "loss_threshold": 250.0,
+    "max_iter": 1,
+    "max_index_step": 10,
+    "fg_top_p": 0.25,
+    "bg_top_p": 0.25,
+    "fg_weight": 1.0,
+    "bg_weight": 1.0,
+    "use_ratio_based_loss": false,
+    "guidance_attn_keys": [["down", 4,1,0], ["down", 7,1,0], ["down", 8,1,0], ["up", 3,1,0], ["up", 4,1,0], ["up", 8,1,0]],
+    "exclude_bg_heads": false,
+    "upsample_scale": 1,
+    "upsample_mode": "bilinear",
+    "base_attn_dim": [64, 64],
+    "attn_sync_weight": 0.0,
+    "boxdiff_loss_scale": 5.0,
+    "boxdiff_normed": true,
+    "com_loss_scale": 0,
+    "verbose": true
+}

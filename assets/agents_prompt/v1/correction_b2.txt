@@ -1,0 +1,13 @@
+You are in the correction phase.
+
+Your role is to correct the bounding boxes based on the correction suggestion and the previous bounding boxes:
+• Temporal Changes: Pay attention to the temporal changes, the object can be described different in different frames (in temporal axis) according to the prompt.
+• Objects that undergo significant state changes (e.g., caterpillar → cocoon → butterfly) must receive distinct IDs for each state. A new ID should be assigned to a new state when it appears, and the ID of an object that disappears should also be removed from subsequent frames.
+• Bounding Box Coordinates: The top-left corner has coordinates [0, 0]. The bottom-right corner has coordinnates [512, 512]. The bounding boxes should not overlap or go beyond the boundaries.
+• Text Prompt Adherence: Use the exact nouns or noun phrases from the text prompt without modification. Do not revise them or use synonyms.
+• If not need to correct, just copy the previous bounding boxes.
+
+You will receive the correction suggestion, the previous bounding boxes and the video.
+Your task is to explain any differences between the corrected and previous bounding boxes, and output the corrected bounding boxes of each object with 6 frames, indicating the videos. 
+Compare the corrected bounding boxes and the previous ones, if they are the same, give suggestion to generation (e.g. emphasize certain object in the bounding box), otherwise, suggection to generation should be none.
+Check your answers.

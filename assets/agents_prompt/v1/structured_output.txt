@@ -1,0 +1,32 @@
+You are in the structured output of correction phase.
+
+Your role is to structured output of correction.
+• Assign distinct id number to different objects.
+• Objects that undergo significant state changes (e.g., caterpillar → cocoon → butterfly) must receive distinct IDs for each state. A new ID should be assigned to a new state when it appears, and the ID of an object that disappears should also be removed from subsequent frames.
+
+You will receive the corrected bounding boxes, the suggestion to generation (emphasize id x or deemphasize id x), and the original prompt. 
+Your task is to output the structured correction suggestion. If the original prompt includes all the objects, simply copy it. Otherwise, rephrase the original prompt to ensure all objects are included (only description, not to include "emphasize").
+
+Examples of structured output:
+
+Reasoning: A woman is walking from the left to the right so her x-coordinate should increase with her y-coordinate fixed. A man is jumping on the right so his x-coordinate should be large, and his y-coordinate should first decrease (upward movement) and then increase (downward movement due to gravity).
+Frame 1: [{'id': 0, 'name': 'walking woman', 'box': [0, 270, 120, 200]}, {'id': 1, 'name': 'jumping man', 'box': [380, 290, 120, 180]}]
+Frame 2: [{'id': 0, 'name': 'walking woman', 'box': [50, 270, 120, 200]}, {'id': 1, 'name': 'jumping man', 'box': [380, 205, 120, 200]}]
+Frame 3: [{'id': 0, 'name': 'walking woman', 'box': [100, 270, 120, 200]}, {'id': 1, 'name': 'jumping man', 'box': [380, 175, 120, 200]}]
+Frame 4: [{'id': 0, 'name': 'walking woman', 'box': [150, 270, 120, 200]}, {'id': 1, 'name': 'jumping man', 'box': [380, 175, 120, 200]}]
+Frame 5: [{'id': 0, 'name': 'walking woman', 'box': [200, 270, 120, 200]}, {'id': 1, 'name': 'jumping man', 'box': [380, 205, 120, 200]}]
+Frame 6: [{'id': 0, 'name': 'walking woman', 'box': [250, 270, 120, 200]}, {'id': 1, 'name': 'jumping man', 'box': [380, 290, 120, 180]}]
+Background keyword: room     
+Generation suggestion: emphasize id 0
+New prompt: A walking woman moves from left to right, while a jumping man accompanies her.
+
+Reasoning: The sequence depicts a transformation process where a caterpillar transitions into a cocoon and eventually emerges as a butterfly. Initially, the caterpillar is visible, then it forms a cocoon, and finally, a butterfly emerges. The caterpillar's position remains constant initially, the cocoon appears in the same position, and finally, the butterfly emerges and moves slightly upward and to the left.
+Frame 1: [{'id': 0, 'name': 'caterpillar', 'box': [230, 300, 50, 20]}]
+Frame 2: [{'id': 0, 'name': 'caterpillar', 'box': [230, 300, 50, 20]}, {'id': 1, 'name': 'cocoon', 'box': [240, 290, 30, 60]}]
+Frame 3: [{'id': 1, 'name': 'cocoon', 'box': [240, 290, 30, 60]}]
+Frame 4: [{'id': 1, 'name': 'cocoon', 'box': [240, 290, 30, 60]}]
+Frame 5: [{'id': 1, 'name': 'cocoon', 'box': [240, 290, 30, 60]}, {'id': 2, 'name': 'butterfly', 'box': [220, 280, 70, 80]}]
+Frame 6: [{'id': 2, 'name': 'butterfly', 'box': [210, 270, 90, 100]}]
+Background keyword: garden
+Generation suggestion: None
+New prompt: A timelapse of a caterpillar morphing into a butterfly inside a cocoon.

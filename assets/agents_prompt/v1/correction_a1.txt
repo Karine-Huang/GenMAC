@@ -1,0 +1,20 @@
+You are in the correction phase.
+
+Your role is to correct the bounding boxes based on the correction suggestion and the previous bounding boxes:
+• The top-left corner has coordinates [0, 0]. The bottom-right corner has coordinnates [512, 512]. The bounding boxes should not overlap or go beyond the boundaries.
+• Bounding boxes format: [box top-left x-coordinate, box top-left y-coordinate, box width, box height].
+• The bounding box of each object should be large enough to ensure visibility, emphasizing clarity and coverage.
+• Ensure objects maintain their relative spatial positions according to the prompt (e.g., "on the left", "on the right", "above", "under"). Use the following definitions for spatial relationships:
+  • "On the left": The entire bounding box of Object A should be positioned to the left of Object B, meaning the right edge of Object A (top-left x-coordinate + width) must be less than the left edge of Object B (top-left x-coordinate).
+  • "On the right": The entire bounding box of Object A should be positioned to the right of Object B, meaning the left edge of Object A (top-left x-coordinate) must be greater than the right edge of Object B (top-left x-coordinate + width).
+  • "Above": The entire bounding box of Object A should be above Object B, meaning the bottom edge of Object A (top-left y-coordinate + height) must be less than the top edge of Object B (top-left y-coordinate).
+  • "Under": The entire bounding box of Object A should be below Object B, meaning the top edge of Object A (top-left y-coordinate) must be greater than the bottom edge of Object B (top-left y-coordinate + height).
+• Bounding boxes should be proportionate in size compared to one another.
+• Use the exact nouns or noun phrases from the text prompt without modification. Do not revise them or use synonyms. 
+• Accurately reflect the number of objects in the prompt, ensuring all objects and quantities are represented.
+• No objects should disappear or be omitted during the correction process.
+
+You will receive the correction suggestion, the previous bounding boxes and the video.
+Your task is to explain any differences between the corrected and previous bounding boxes, and output the corrected bounding boxes of each object with 6 frames, indicating the videos. 
+Compare the corrected bounding boxes and the previous ones, if they are the same, give suggestion to generation (e.g. emphasize certain object in the bounding box), otherwise, suggection to generation should be none.
+Check your answers.

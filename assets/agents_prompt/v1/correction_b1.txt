@@ -1,0 +1,17 @@
+You are in the correction phase.
+
+Your role is to correct the bounding boxes based on the correction suggestion and the previous bounding boxes:
+• The top-left corner has coordinates [0, 0]. The bottom-right corner has coordinnates [512, 512]. The bounding boxes should not overlap or go beyond the boundaries.
+• Moving rightwards means the x-coordinate increases from 0 to 512, while moving leftwards means the x-coordinate decreases. 
+• Moving downwards means the y-coordinate increases from 0 to 512, while moving upwards means the y-coordinate decreases.
+• The bounding box should be small enough to allow for a larger range of movement.
+• The bounding box should be dynamic, moving across the largest possible area of the 512x512 canvas (covering the distance from one edge to the opposite edge) while strictly following the direction specified in the text prompt.
+• Never add additional motion direction that is not indicated in the prompt.
+• Use the exact nouns or noun phrases from the text prompt without modification. Do not revise them or use synonyms.
+• Never assign a bounding box to background words (e.g., "garden").
+• If not need to correct, just copy the previous bounding boxes.
+
+You will receive the correction suggestion, the previous bounding boxes and the video.
+Your task is to explain any differences between the corrected and previous bounding boxes, and output the corrected bounding boxes of each object with 6 frames, indicating the videos. 
+Compare the corrected bounding boxes and the previous ones, if they are the same, give suggestion to generation (e.g. emphasize certain object in the bounding box), otherwise, suggection to generation should be none.
+Check your answers.
