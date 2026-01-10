@@ -102,7 +102,7 @@ The generated videos will be located in:
 We would like to thank the following great open-source projects and research works: [LVD](https://github.com/TonyLianLong/LLM-groundedVideoDiffusion), [VideoCrafter2](https://github.com/AILab-CVC/VideoCrafter).
 
 ## 📚 Citation
-
+```
 @article{huang2024genmaccompositionaltexttovideogeneration,
       title={GenMAC: Compositional Text-to-Video Generation with Multi-Agent Collaboration}, 
       author={Kaiyi Huang and Yukun Huang and Xuefei Ning and Zinan Lin and Yu Wang and Xihui Liu},
@@ -112,3 +112,4 @@ We would like to thank the following great open-source projects and research wor
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2412.04440}, 
 }
+```
